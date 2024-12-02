@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Hide vertical and horizontal scrollbars on the body */
+html, body {
+    overflow: hidden;
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+}
+
+/* If you want to keep scrolling but hide the scrollbar */
+body {
+    overflow: auto;
+    height: 100%;
+}
+
+/* Hide scrollbars for Chrome, Safari, and Edge */
+body::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar width */
+    height: 0;
+}
+
+/* Hide scrollbar for Firefox */
+body {
+    scrollbar-width: none;  /* Firefox-specific property */
+}
+
+/* Remove padding/margin that might cause scrolling */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.disabled-out-of-stock-product {
+    background-color: #282828;
+    //color: #fff;
+    //text-align: center;
+    //padding: 1rem;
+    border: 2px solid #ff0000;
+    //border-radius: 5px;
+    //text-transform: uppercase;
+    //letter-spacing: 1.5px;
+    //position: relative;
+    //font-size: 1.2rem;
+    // font-weight: bold;
+    //cursor: not-allowed; /* Shows it as disabled */
+    //box-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+
+    background: rgba(255, 0, 0, 0.9); /* Semi-transparent red layer */
+    //pointer-events: none; /* Allow clicks through the layer */
+    //z-index: 1;
+
+    //border-color: #80bdff;
+    outline: none;
+    //box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 0.8);
+}

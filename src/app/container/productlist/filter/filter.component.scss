@@ -1,0 +1,67 @@
+.filter_container {
+    margin: 1em;
+ 
+    // border: 1px solid black;
+    
+}
+
+.filter_container span{
+    padding: 0.2em;
+    
+}
+.filter_container ul {
+ margin: 0;
+ padding: 0 7em;
+}
+.filter_container ul li{
+    list-style: none;
+    display: inline;
+    padding: 1em;
+    font-size: larger;
+    // background-color: aqua;
+}
+
+/* Container for radio button */
+.filter_container ul li input[type="radio"] {
+    position: relative;
+    width: 15px;           /* Increase size of the radio button */
+    height: 15px;          /* Increase size of the radio button */
+    appearance: none;      /* Remove default browser styling */
+    border: 2px solid #666; /* Add custom border */
+    border-radius: 50%;    /* Make it circular */
+    outline: none;         /* Remove outline */
+    cursor: pointer;       /* Add pointer cursor */
+    // margin-right: 10px;    /* Add some spacing between radio and label */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Background color for unselected state */
+.filter_container ul li input[type="radio"]:not(:checked) {
+    background-color: #fff; /* White background for unselected state */
+}
+
+/* Hover effect for radio button */
+.filter_container ul li input[type="radio"]:hover {
+    border-color: #444; /* Darker border on hover */
+}
+
+/* Custom checked state */
+.filter_container ul li input[type="radio"]:checked {
+    background-color: rgb(225, 114, 30); /* Green background when selected */
+    border-color: rgb(225, 114, 30);    /* Border color to match selected background */
+    box-shadow: 0 0 8px rgba(255, 117, 11, 0.9); ;
+     /* Add subtle glow effect */
+}
+
+/* Custom inner circle when checked */
+.filter_container ul li input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;             /* Size of inner circle */
+    height: 12px;            /* Size of inner circle */
+    background-color: #fff;  /* White inner circle */
+    border-radius: 50%;      /* Make it circular */
+}

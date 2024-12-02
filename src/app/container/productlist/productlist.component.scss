@@ -1,0 +1,10 @@
+.product_list_container {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align items in the center */
+    gap: 20px; /* Add space between product cards */
+    padding: 20px; /* Add padding around the container */
+  }
+  

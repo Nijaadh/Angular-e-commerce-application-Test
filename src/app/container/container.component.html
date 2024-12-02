@@ -1,0 +1,37 @@
+<div class="">
+
+    <app-search (onSearchTextChange)="onserchTextChange($event)"></app-search>
+    <app-productlist [searchtext]="searchText" #productListComponent></app-productlist>
+    <app-productdetail [productListComp]="productListComponent"
+        *ngIf="productListComponent.selectedProduct"></app-productdetail>
+
+    <div class=" featured_products">
+
+        <div class=" featured_products_heading">
+            <h1>Latest arrival in popular Brands</h1>
+        </div>
+        <div class="col featured_products_items">
+            <app-featuredbarnds>
+                <div class="product-img img-one img"></div>
+                <h3 class="title t1">New Arival in Nike</h3>
+                <button type="submit" class="button button1">show Nike Arivals</button>
+            </app-featuredbarnds>
+
+            <app-featuredbarnds>
+                <div class="product-img img-two img"></div>
+                <h3 class="title t2">New Arival in Rebock</h3>
+                <button type="submit" class="button button2">Show Rebock Arival </button>
+            </app-featuredbarnds>
+
+            <app-featuredbarnds>
+                <div class="product-img img-three img"></div>
+                <h3 class="title t3">New Arival in Adidas</h3>
+                <button type="submit" class="button button3">Show Adidas Arival </button>
+            </app-featuredbarnds>
+            <!-- <app-featuredbarnds></app-featuredbarnds> -->
+        </div>
+
+
+    </div>
+
+</div>

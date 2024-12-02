@@ -1,0 +1,14 @@
+
+<div class="search_box">
+    <!-- <input type="text" class="input_field" [ngStyle]="{'border-color': searchText ? 'black' : 'rgb(117, 117, 117)'}" [(ngModel)]="searchText" (input)="seach($event)"> -->
+    <input type="text" class="input_field"  #InputText>
+    <!-- class="search_button" -->
+    <!-- <button [ngClass]="{'search_button':true, 'search_button_disabled':!(searchText), 'search_button_enabled':searchText}" [disabled]="!(searchText)">Search</button> -->
+    <!-- <button class="search_button search_button_enabled" (click)="setsearchText(InputText)">Search</button> -->
+    <button class="search_button search_button_enabled" (click)=" setsearchTextByViewChild()">Search</button>
+   
+</div>
+
+<div class="search_result" >
+    <p *ngIf="searchText">search result for: {{searchText}}</p>
+</div>

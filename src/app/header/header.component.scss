@@ -1,0 +1,298 @@
+
+.header {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #233341;
+    color: aliceblue;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    // border-width: 2px;
+    // border-style: solid;
+    // border-color: teal;
+
+
+    font-family: "Montserrat", sans-serif;
+    font-size:medium;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.header .header_block {
+    
+}
+
+.header .toggle{
+    font-size: x-large;
+    // border:1px solid black;
+    display: none;
+}
+
+.header .logo{
+    background-image: url("../../assets/images/ecompilot.png");
+    // background-image: url("../assets/images/logo.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat:no-repeat;
+    width:12em;
+    
+    padding:  0.5em;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    // background-color: rgb(195, 173, 230);
+    // border: 1px solid black;
+
+}
+
+.header .nav {
+    display: flex;
+    flex-wrap: wrap;
+    
+    // background-color: rgb(195, 173, 230);
+    // border: 1px solid black;
+}
+
+.header .nav ul {
+    height: 3em;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0.5em;
+    // border: 1px solid black;
+
+}
+
+.header .nav ul li {
+
+    // background-color: beige;
+    // border: 1px solid black;
+    margin: 0.25em 0.5em;
+    padding: 0 0.5em;
+
+}
+
+/* Base styles */
+.header .nav .active {
+    position: relative;
+    
+}
+
+.header .nav .active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgb(255, 255, 255); /* White border color */
+    border-radius: 3px;
+    transition: width 0.3s ease; /* Smooth transition */
+}
+
+/* On hover, expand the border */
+.header .nav .active:hover::after {
+    width: 100%; /* Expand the border width */
+}
+
+.header .account {
+    display: flex;
+    flex-wrap: wrap;
+    // background-color: rgb(195, 173, 230);
+    // border: 1px solid black;
+    justify-content: space-around;
+    padding: 0 0.5em;
+    align-items: center;
+    
+}
+
+.header .account .cart{
+    // border :1px solid black;
+    margin: 0.25em 0.5em;
+    padding: 0 0.5em;
+}
+
+.header .account .wish_list{
+    // border :1px solid black;
+    margin: 0.25em 0.5em;
+    padding: 0 0.5em;
+}
+
+.header .account  .wish_list i {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+.header .account  .wish_list i:hover {
+    transform: scale(1.2); /* Zoom in on hover (20% increase) */
+}
+
+
+
+.header .user{
+    display: flex;
+    flex-wrap: wrap;
+    // background-color: rgb(195, 173, 230);
+    // border: 1px solid black;
+    justify-content: space-around;
+    padding: 0 0.5em;
+    align-items: center;
+
+}
+
+.header .user label{
+    font-family: "Montserrat", sans-serif;
+    font-size:normal;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.header .user .icon{
+    font-size: medium;
+}
+
+
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    // display: none;
+    width:100%;
+    height: 100%;
+    background-color: aqua;
+}
+
+
+
+@media only screen and  (min-width: 0px) and (max-width: 153px){
+
+    .header{
+        background-color: rgb(58, 148, 83);
+        justify-content: center;
+       
+    }
+
+    .header .nav{
+        display: none;
+    }
+
+    .header .account{
+        display: none;
+    }
+
+    .header .user{
+        display: none;
+    }
+
+    .header .toggle{
+        display: block;
+        cursor: pointer;
+        color: white;
+        order: 2;       
+    }
+
+    .header .logo{
+        
+        order: 1;
+    }
+}
+
+
+@media only screen and  (min-width: 153px) and (max-width: 230px){
+
+    .header{
+        background-color: rgb(58, 148, 83);
+       
+    }
+
+    .header .nav{
+        display: none;
+    }
+
+    .header .account{
+        display: none;
+    }
+
+    .header .user{
+        display: none;
+    }
+
+    .header .toggle{
+        display: block;
+        cursor: pointer;
+        color: white;       
+    }
+
+    .header .logo{
+        width: 6em;
+    }
+
+}
+
+@media only screen and  (min-width: 230px) and (max-width: 345px){
+
+    .header{
+        background-color: rgb(58, 148, 83);
+       
+    }
+
+    .header .nav{
+        display: none;
+    }
+
+    .header .account{
+        display: none;
+    }
+
+    .header .toggle{
+        display: block;
+        cursor: pointer;
+        color: white;       
+    }
+
+    .header .logo{
+        width: 6em;
+    }
+
+}
+
+
+
+
+@media only screen and  (min-width: 345px) and (max-width: 754px){
+    
+    .header{
+        background-color: blue;
+       
+    }
+
+    .header .nav{
+        display: none;
+    }
+
+    .header .toggle{
+        display: block;
+        cursor: pointer;
+        color: white;       
+    }
+
+    .header .logo{
+        width: 6em;
+    }
+}
+
+
+
+
+  @media only screen and  (min-width: 754px){
+    
+    .header{
+        background-color: rgb(236, 120, 32);
+    }
+    
+
+  }

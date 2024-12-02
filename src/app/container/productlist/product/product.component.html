@@ -1,0 +1,21 @@
+<div class="product-card" zoomProdut [DisabledProduct]="!product.isInInventory">
+    <div class="image-container" >
+      <img [src]="product.imageURL" alt="{{product.name}}">
+      <span class="favorite-star" >★</span>
+      <label class="off_lable" *ngIf="product.discountPrice">{{getDiscoutPercentage(product).toFixed(0)+'% OFF'}}</label>
+    </div>
+    <div class="product-info">
+      <h2>{{product.name}}</h2>
+      <p>{{product.description}}</p>
+      <div class="tags">
+        <span class="tag">{{product.brand}}</span>
+        <span class="tag">{{product.color}}</span>
+        <span class="tag">{{product.itemsLeft}} left</span>
+      <p class="Stock_lable" [ngStyle]="{color:product.isInInventory?'Green':'Red'}">{{ product.isInInventory===true?'Availbale In Stock':'Not Avaible In Stock'}}</p>
+      </div> 
+      <div class="price-order">
+        <span class="price">Rs. {{product.price.toFixed(2)}}</span>
+        <button class="order-button" >Order Now</button>
+      </div>
+    </div>
+  </div>
